@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "CAPTCHA Solver",
   "version": "1.0",
-  "description": "Automatically solves audio CAPTCHAs using the VoiceAgain API.",
+  "description": "Automatically solves audio CAPTCHAs using the Assembly API.",
   "permissions": ["activeTab", "scripting", "webNavigation", "storage"],
   "host_permissions": ["<all_urls>"],
   "action": {
