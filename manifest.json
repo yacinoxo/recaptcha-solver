@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "CAPTCHA Solver",
+  "version": "1.0",
+  "description": "Automatically solves audio CAPTCHAs using the VoiceAgain API.",
+  "permissions": ["activeTab", "scripting", "webNavigation", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.jpg"
+  },
+  "icons": {
+    "16": "icon.jpg",
+     "48": "icon.jpg",
+    "128": "icon.jpg"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["script.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }]
+}

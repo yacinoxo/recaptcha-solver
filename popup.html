@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA Solver</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px !important;
+            height: 100vh;
+            width: 100%;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 300px;
+            max-width: 320px;
+            transition: all 0.3s ease;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #6e44ff;
+            outline: none;
+        }
+
+        input:invalid {
+            border-color: #ff4444;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+        }
+
+        #saveApiKey {
+            background-color: #4CAF50;
+        }
+
+        #saveApiKey:hover {
+            background-color: #45a049;
+        }
+
+        #solveButton {
+            background-color: #6e44ff;
+        }
+
+        #solveButton:hover {
+            background-color: #5a2ee0;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            display: none;
+        }
+
+        .error {
+            background-color: #ff4444;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        .input-group .error {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            margin-top: 5px;
+        }
+
+        .input-group .error.show {
+            height: auto;
+        }
+
+        a{
+            text-decoration: none;
+            color: #6e44ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CAPTCHA Solver</h2>
+        <form id="apiKeyForm">
+            <div class="input-group">
+                <label for="apiKeyInput">
+                    <strong>Your API KEY <a href="https://www.assemblyai.com/products/speech-to-text" target="_blank">( Manage )</a> :</strong>
+                </label>
+                <input type="text" id="apiKeyInput" name="apiKey" placeholder="Enter API KEY" required>
+                <div class="error" id="apiKeyError">Please enter your API KEY</div>
+            </div>
+            <button type="button" id="saveApiKey">Save KEY</button>
+            <button type="button" id="solveButton" disabled>Solve CAPTCHA</button>
+            <div class="message error" id="errorMessage"></div>
+            <div class="message success" id="successMessage"></div>
+        </form>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
