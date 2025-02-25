@@ -1,70 +1,43 @@
-reCAPTCHA AutoSolve | Browser Extension
-Automatically bypass Google reCAPTCHA challenges with minimal user interaction
+# Google reCAPTCHA Solver Extension
 
-License
-Chrome Web Store
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
-🔍 Overview
-A browser extension designed to streamline solving Google reCAPTCHA challenges (v2/v3) by leveraging automated methods. Ideal for developers, testers, and researchers working with web automation ethically.
+## 🚀 Overview
+This browser extension automates the solving of Google reCAPTCHA challenges, making web browsing and automation workflows smoother. It efficiently bypasses reCAPTCHA verification with minimal user intervention.
 
-🚀 Features
-One-Click Solve: Minimal user interaction required
+## 🔥 Features
+- Automatically detects and solves Google reCAPTCHA challenges.
+- Supports reCAPTCHA v2 and v3.
+- Lightweight and easy to use.
+- Open-source and customizable.
 
-Multi-Version Support: Works with reCAPTCHA v2 (checkbox/image) and v3
-
-Open Source: Transparent codebase for community auditing
-
-Cross-Platform: Compatible with Chromium-based browsers (Chrome, Edge, Brave)
-
-Privacy Focused: No data collection or tracking
-
-⚙️ How It Works
-Detects reCAPTCHA widgets on page load
-
-Analyzes challenge type (image/audio/checkbox)
-
-Uses hybrid approach combining:
-
-Audio-to-text conversion via speech recognition APIs
-
-Pre-trained image recognition models
-
-Contextual browser fingerprint analysis
-
-Submits solution automatically
-
-⚠️ Legal & Ethical Notice
-This project is intended for:
-
-Accessibility research
-
-Web automation testing
-
-Educational purposes
-
-Do NOT use this for:
-
-Bypassing security measures maliciously
-
-Spam or brute-force attacks
-
-Violating terms of service of any website
-
-Users assume full responsibility for ethical and legal usage.
-
-📥 Installation
-bash
-Copy
+## 📦 Installation
+### 1. Clone the Repository
+```bash
 git clone https://github.com/yacinoxo/recaptcha-solver.git
-Enable Chrome Developer Mode (chrome://extensions)
+cd recaptcha-solver-extension
+```
+### 2. Load the Extension in Your Browser
+#### For Chrome / Edge:
+1. Open **chrome://extensions/** in your browser.
+2. Enable **Developer mode** (top-right corner).
+3. Click **Load unpacked** and select the extension folder.
 
-Load unpacked extension
+#### For Firefox:
+1. Open **about:debugging** in your browser.
+2. Click **This Firefox**.
+3. Click **Load Temporary Add-on**, then select `manifest.json` from the project folder.
 
-🌟 Contributors Welcome
-Found a bug? Have an improvement idea?
+## 🛠️ Contributing
+Contributions are welcome! Feel free to fork this repository and submit pull requests.
 
-Open an issue for feature requests/bugs
+### Steps to Contribute:
+1. Fork the repo.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Make your changes and commit (`git commit -m 'Add new feature'`).
+4. Push the branch (`git push origin feature-name`).
+5. Open a Pull Request.
 
-Submit PRs for code improvements
-
-Help improve documentation
+## 📧 Contact
+For questions or suggestions, feel free to open an issue or reach out at [y0933335@gmail.com].
